@@ -1,0 +1,34 @@
+{% extends 'argon/base.html' %}
+
+{% block content %}
+<form method="POST" enctype='multipart/form-data'>
+    {% csrf_token %}
+    <div class="card" style="padding:2em">
+        {{form.title}}
+        <span class="text-danger">
+            {{form.title.errors}}
+        </span>
+        {{form.description}}
+        <span class="text-danger">
+            {{form.description.errors}}
+        </span>
+        {{form.time}}
+        <span class="text-danger">
+            {{form.time.errors}}
+        </span>
+
+        <div class="custom-file">
+            {{form.image}}
+            <label class="custom-file-label" for="id_image">Select file</label>
+            <span class="text-danger">
+                {{form.image.errors}}
+            </span>
+
+        </div>
+    </div>
+    <div class="create-riwayat">
+        <label for="submit" style="cursor:pointer;"><i class="fa fa-plus"></i></label>
+        <button type="submit" style="display:none;" id="submit"></button>
+    </div>
+</form>
+{% endblock content %}

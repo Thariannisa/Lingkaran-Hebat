@@ -1,0 +1,76 @@
+{% extends 'argon/base.html' %}
+
+{% block content %}
+<div class="card">
+    <div class="row">
+        <div class=" col-md-1 text-center">
+            <span class="avatar avatar-sm rounded-circle mt-3 ml-2">
+                <img alt="Image placeholder" src="/static/img/theme/team-4.jpg">
+            </span>
+        </div>
+        <form action="#" class="col-md-11">
+            <div class="row">
+                <div class="col-md-10 pt-2">
+                    <div class="form-group ">
+                        <input type="text" class="form-control" placeholder="Ayo mulai berbagi inspirasi"
+                            aria-label="Username" aria-describedby="basic-addon1" style="border:none;box-shadow:none;">
+                    </div>
+                </div>
+                <div class="col-md-2 pt-3">
+                    <div class="form-group">
+                        <label for="submit" class="mr-2"><i class='fa fa-paper-plane'
+                                style="font-size: 24px; cursor:pointer;"></i></label>
+                        <button type="submit" id="submit" style="display:none"></button>
+                        <label for="image"><i class='fa fa-camera' style="font-size: 24px; cursor:pointer;"></i></label>
+                        <input type="file" id="image" style="display:none">
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card">
+    <div class="row">
+        <div class="col-md-1 text-center">
+            <span class="avatar avatar-sm rounded-circle mt-3 ml-2">
+                <img alt="Image placeholder" src="/static/img/theme/team-4.jpg">
+            </span>
+        </div>
+        <div class="col-md-11 pt-2">
+            <span class="row">
+                udin
+            </span>
+            <span class="row">
+                <i class="fa fa-clock mr-1 mt-1" style="font-size:18px"></i>
+                waktu
+            </span>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 pt-2 pl-4">
+            description
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 pt-2 pl-4">
+            <img alt="Image" src="/static/img/theme/team-4.jpg" widht="200px" height="200px">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 pl-4 pt-4 pb-2">
+            <a href="#" class="ml-2">
+                <i class="fa fa-thumbs-up" style="font-size: 20px;"></i>
+                1.2k likes
+            </a>
+            <a href="#" class="ml-2"><i class="fa fa-hand-paper" style="font-size: 20px;"></i>
+                180k claps
+            </a>
+
+            <a href="#" class="float-right mr-4"><i class="fa fa-share-alt" style="font-size: 20px;"></i>
+                Share
+            </a>
+        </div>
+    </div>
+</div>
+{% endblock content %}

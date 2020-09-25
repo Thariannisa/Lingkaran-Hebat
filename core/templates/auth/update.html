@@ -1,0 +1,67 @@
+{% extends 'argon/base.html' %}
+
+{% block content %}
+<form method="POST" enctype='multipart/form-data'>
+    {% csrf_token %}
+    <div class="card" style="padding:2em">
+        <div class="form-group">
+            {{form.name}}
+            <span class="text-danger">
+                {{form.name.errors}}
+            </span>
+        </div>
+        <div class="form-group">
+            {{form.email}}
+            <span class="text-danger">
+                {{form.email.errors}}
+            </span>
+        </div>
+        <div class="form-group">
+            {{form.umur}}
+            <span class="text-danger">
+                {{form.umur.errors}}
+            </span>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="password1" placeholder="Masukkan password anda"
+                autocomplete="new-password" required="" id="id_password1">
+
+            <span class="text-danger">
+                {{form.password1.errors}}
+            </span>
+        </div>
+        <div class="form-group">
+            <input type="password" class="form-control" name="password2" placeholder="Masukkan konfirmasi password anda"
+                autocomplete="new-password" required="" id="id_password2">
+
+            <span class="text-danger">
+                {{form.password2.errors}}
+            </span>
+        </div>
+
+        <div class="custom-file">
+            {{form.avatar}}
+            <label class="custom-file-label" for="id_avatar">Select file</label>
+            <span class="text-danger">
+                {{form.avatar.errors}}
+            </span>
+
+        </div>
+    </div>
+    <div class="create-riwayat">
+        <label for="submit" style="cursor:pointer;"><i class="fa fa-plus"></i></label>
+        <button type="submit" style="display:none;" id="submit"></button>
+    </div>
+</form>
+{% endblock content %}
+
+{% block script %}
+<script>
+    const sfile = document.querySelector("#id_avatar")
+    const ssrcFile = document.querySelector(".custom-file-label")
+    sfile.addEventListener('change', (res) => {
+        let parseName = res.target.value.split("\\")
+        ssrcFile.innerHTML = parseName[parseName.length - 1]
+    })
+</script>
+{% endblock script %}

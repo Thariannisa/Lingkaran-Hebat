@@ -1,0 +1,44 @@
+<!-- Sidenav -->
+<nav class="sidenav navbar navbar-vertical  fixed-left  navbar-expand-xs navbar-light bg-white" id="sidenav-main">
+    <div class="scrollbar-inner">
+        <!-- Brand -->
+        <div class="sidenav-header  align-items-center">
+            <a class="navbar-brand" href="javascript:void(0)">
+                <img src="/static/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            </a>
+        </div>
+        <div class="navbar-inner">
+            <!-- Collapse -->
+            <div class="collapse navbar-collapse" id="sidenav-collapse-main">
+                <!-- Nav items -->
+                <ul class="navbar-nav">
+                    {% comment %} <li class="nav-item">
+                        <a class="nav-link active" href="{% url 'index' %}">
+                            <i class="fas fa-home"></i>
+                            <span class="nav-link-text">Home</span>
+                        </a>
+                    </li> {% endcomment %}
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'riwayat:list' %}">
+                            <i class="ni ni-collection text-primary"></i>
+                            <span class="nav-link-text">Treatment</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'inspiration:list' %}">
+                            <i class="ni ni-pin-3 text-primary"></i>
+                            <span class="nav-link-text">Inspiration</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'article:list' %}">
+                            <i class="ni ni-single-02"></i>
+                            <span class="nav-link-text">Article</span>
+                        </a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </div>
+</nav>
